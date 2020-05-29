@@ -427,6 +427,10 @@ footer{
         padding-bottom: 20px;
     }
 
+.content-foo img{
+        width: 25%;
+    }
+
     .titulo-final{
         font-size: 15px;
     }

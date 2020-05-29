@@ -220,4 +220,9 @@ footer{
     .container .related-post {
         grid-column: 1/-1;
     }
+
+    .content-foo img{
+        width: 25%;
+    }
+
 }
