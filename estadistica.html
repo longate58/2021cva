@@ -1,56 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 	<head>
 		<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     	<title>CCGZ-Estadistica</title>
-    	        <link rel="shortcut icon" href="img/ccgz.png" type="image/x-icon">
+    	<link rel="shortcut icon" href="img/ccgz.png" type="image/x-icon">
     	<link rel="stylesheet" href="css/estadistica.css">
-
-        <!--- DEFINIR EL ESTILO DE FUENTE -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
     	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     	<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
-
-         <!--Load the AJAX API-->
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script type="text/javascript">
-            // Cargue la API de visualización y el paquete de gráfico circular.
-              google.load('visualization', '1.0', {'packages':['corechart']});
-
-              // Configure una devolución de llamada para que se ejecute cuando se cargue la API de visualización de Google.
-              google.setOnLoadCallback(drawChart);
-
-              // La devolución de llamada que crea y llena una tabla de datos, crea instancias del gráfico circular, pasa los datos y los dibuja.
-              function drawChart() {
-
-                // Crea la tabla de datos.
-                var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Topping');
-                data.addColumn('number', 'Slices');
-                data.addRows([
-                  ['01 a 10', 543],
-                  ['11 a 20', 170],
-                  ['21 a 30', 145],
-                  ['31 a 40', 351],
-                  ['41 a 50', 265],
-                  ['51 a 60', 157],
-                  ['61 a +', 119]
-                ]);
-
-                // Establecer opciones de gráfico
-                var options = {'title':"Distribución por rango de edad",
-                               'width':800,
-                               'height':600};
-
-                // Cree instancias y dibuje nuestra tabla, pasando algunas opciones.
-                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-                chart.draw(data, options);
-              }
-        </script>
-
 	</head>
 
 	<body>
@@ -64,7 +23,7 @@
         	</nav>
         	<section class="textos-header">
             	<h1>Estadísticas demográficas del CCGZ</h1>
-            	<h2>Controles administrativos e informes de rendimiento.</h2>
+            	<h2>Controles administrativos e informes de rendimiento</h2>
         	</section>
         	<div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
@@ -73,28 +32,101 @@
             </svg></div>
     	</header>
 
-   
-        <!--Div que mantendrá el gráfico circular-->
-        <div id="chart_div"></div>
+<!--- MAIN --------------------------------------------------------->
+	    <div class="container">
+	        <main class="content">
+		            <article class="article">
+		                <!--- <h1>Title</h1> --->
+		                <h1 class="weigth-600">
+		                        Rango <span class="weigth-400">de edad</span>
+		                </h1>
+		                <p>La población Joven (01 a 20 años) representa el 41% del total demografico. Los Adultos Comtemporaneos (21 a 50 años) reprensentan el 43% del total demografico y los Adultos Mayores (51 a + años) representan 16% del total demografico. RESULTADO: La población activa laboralmente es de 52,5% aproximadamente (21 a 60 años).</p>
+		            </article>
+			          <!--Load the AJAX API-->
+				        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+				        <script type="text/javascript">
+				            // Cargue la API de visualización y el paquete de gráfico circular.
+				              google.load('visualization', '1.0', {'packages':['corechart']});
+
+				              // Configure una devolución de llamada para que se ejecute cuando se cargue la API de visualización de Google.
+				              google.setOnLoadCallback(drawChart);
+
+				              // La devolución de llamada que crea y llena una tabla de datos, crea instancias del gráfico circular, pasa los datos y los dibuja.
+				              function drawChart() {
+
+				                // Crea la tabla de datos.
+				                var data = new google.visualization.DataTable();
+				                data.addColumn('string', 'Topping');
+				                data.addColumn('number', 'Slices');
+				                data.addRows([
+				                  ['01 a 10', 543],
+				                  ['11 a 20', 170],
+				                  ['21 a 30', 145],
+				                  ['31 a 40', 351],
+				                  ['41 a 50', 265],
+				                  ['51 a 60', 157],
+				                  ['61 a +', 119]
+				                ]);
+
+				                // Establecer opciones de gráfico
+				                var options = {'title':"Distribución por rango de edad",
+				                               'width':600,
+				                               'height':400};
+
+				                // Cree instancias y dibuje nuestra tabla, pasando algunas opciones.
+				                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+				                chart.draw(data, options);
+				              }
+				        </script>
+				   
+				        <!--Div que mantendrá el gráfico circular-->
+				        <div id="chart_div"></div>    
 
 
-        <footer>
-            <div class="contenedor-footer">
-                <div class="content-foo">
-                    <nav>
-                        <a href="https://www.instagram.com/2019ccgz/"><img src="img/instagram.svg" alt=""width="10%"></a>
-                        <a href="https://twitter.com/2019ccgz"><img src="img/twitter.svg" alt="" width="10%"></a>
-                        <a href=""><img src="img/facebook.svg" alt="" width="10%"></a>
+		            <article class="article">
+		                <h1 class="weigth-600">
+		                        Parto <span class="weigth-400">Humanizado</span>
+		                </h1>
+		                <p>“At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat…</p>
+		            </article>
+		            
+				</main>
+<!--- MAIN --------------------------------------------------------->
 
-                    </nav> 
-                    <h4>NUESTRAS REDES SOCIALES</h4>
-                    <p>Espacios de comunicación informativa respecto a las oportunidades de mejoras actuales y futuras del Consejo Comunal Girazoles de Zamora.</p>
-                </div>
-            
-            </div>
-            <h2 class="titulo-final">&copy; 2020 | Todos los derechos reservados Long Art Digital, C. A.</h2>
-        </footer>
 
+<!--- ASIDE --------------------------------------------------------->	            
+	            <aside class="sidebar">
+					<div>
+						<article class="article">
+			            	<h1 class="weigth-600">
+			                        Análisis<span class="weigth-400"> de los datos</span>
+			                </h1>
+			                <P>“At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat…”<br></br></p>
+			 				<img src="img/d1.webp" alt="" >
+		            	</article>
+
+		            	
+	        </aside>
+<!--- ASIDE --------------------------------------------------------->
+
+<!--- footer --------------------------------------------------------->
+
+	        <footer>
+		        <div class="contenedor-footer">
+		            <div class="content-foo">
+		                <nav>
+		                    <a href="https://www.instagram.com/2019ccgz/"><img src="img/instagram.svg" alt=""width="10%"></a>
+		                    <a href="https://twitter.com/2019ccgz"><img src="img/twitter.svg" alt="" width="10%"></a>
+		                    <a href=""><img src="img/facebook.svg" alt="" width="10%"></a>
+
+		                </nav> 
+		                <h4>NUESTRAS REDES SOCIALES. </h4>
+		                <p>Espacios de comunicación informativa respecto a las oportunidades de mejoras actuales y futuras del Consejo Comunal Girazoles de Zamora.</p>
+		            </div>
+		        </div>
+		        <h2 class="titulo-final">&copy; 2020 | Todos los derechos reservados Long Art Digital, C. A.</h2>
+    		</footer>
+	        
 
 	</body>
 </html>
