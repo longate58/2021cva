@@ -105,6 +105,9 @@ header .textos-header{
     display: flex;
 }
 
+.content .article figure{
+    text-align: justify;
+}
 
 .weigth-400{
     font-weight: 400;
