@@ -144,7 +144,9 @@ header .textos-header{
     font-weight: 600;
 }
 
-
+.sidebar .article a{
+    color: #ffffff;
+}
 
 .container>.related-post {
     background: #2d3436;
