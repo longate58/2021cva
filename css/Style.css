@@ -11,14 +11,15 @@ html, body{
 :root{
 
     /*      Theme colors        */
-    --text-gray: #3f4954;
-    --text-light : #686666da;
-    --bg-color: #0f0f0f;
-    --white: #ffffff;
-    --midnight: #057794;
+    --text-gray: #3f4954; /* color de de texto barra de inicio */
+    --text-white:  #FFFFFF;
+    --text-light : #686666da; /* color de de texto contenido */
+    --bg-color: #0f0f0f; /* color de texto general */
+    --white: #ffffff; /* color de de texto pie de pagina */
+    --midnight: #057794; /* color de fondo barra de inicio */
 
     /* gradient color   */
-    --sky: linear-gradient(120deg, #eddcc7 0%, #d6b78e 100%);
+    --sky: linear-gradient(120deg, #3D89CF 0%, #3D89CF 100%); /* color de fondo anuncios */
 
     /*      theme font-family   */
     --Abel: 'Abel', cursive;
@@ -73,6 +74,10 @@ span{
     color: var(--text-gray);
 }
 
+.text-white{
+    color: var(--text-white);
+}
+
 p{
     font-family: var(--Lexend);
     color: var(--text-light);
@@ -84,14 +89,18 @@ p{
 /* --------------- navbar ----------------- */
 
 .nav{
-    background: #B2B2B2;
+    background: #2E75B6; /* color grisal */
     padding: 0 2rem;
     height: 0rem;
     min-height: 10vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
 }
-
+.nav .items a{    
+    text-decoration: none;
+    color: var(--text-white);
+}
+}
 .nav .nav-menu{    
     justify-content: space-between;
 }
@@ -229,6 +238,7 @@ main .blog-content .btn-blog{
     padding: .7rem 2rem;
     background: var(--sky);
     margin: .5rem;
+    color: var(--white);
 }
 
 main .blog-content span{
@@ -278,6 +288,10 @@ main .site-content .post-content > .post-image, .post-title{
     position: relative;
 }
 
+main .site-content .post-content > .post-image, .post-title > a{
+    padding: 1rem 2rem;
+    position: relative;
+}
 main .site-content .post-content > .post-image .post-info{
     background: var(--sky);
     padding: 1rem;
@@ -353,7 +367,7 @@ main .post-content .post-title a{
 }
 
 .site-content > .sidebar .category-list .list-items a{
-    color:  black;
+    color:  white;
 }
 
 .site-content .sidebar .popular-post .post-content{
@@ -408,6 +422,7 @@ main .post-content .post-title a{
     padding: .4rem 1rem;
     border-radius: 3rem;
     margin: .4rem .6rem;
+    color: var(--white);
 }
 
 
@@ -420,7 +435,7 @@ main .post-content .post-title a{
 
 footer.footer{
     height: 100%;
-    background: #B2B2B2;
+    background: #2E75B6;
     position: relative;
 }
 
@@ -438,7 +453,12 @@ footer.footer .container > div{
 footer.footer .container h2{
     color: var(--white);
 }
-
+footer.footer .container p{
+    color: var(--white);
+}
+footer.footer .container h3{
+    color: var(--white);
+}
 footer.footer .newsletter .form-element{
     background: black;
     display: inline-block;
