@@ -299,6 +299,7 @@ main .site-content .post-content > .post-image .post-info{
     bottom: 0%;
     left: 20vw;
     border-radius: 3rem;
+    color: var(--white);
 }
 
 main .site-content .post-content > .post-image > div{
