@@ -15,7 +15,7 @@ html, body{
     --text-light : #686666da;
     --bg-color: #0f0f0f;
     --white: #ffffff;
-    --midnight: #104f55;
+    --midnight: #057794;
 
     /* gradient color   */
     --sky: linear-gradient(120deg, #eddcc7 0%, #d6b78e 100%);
@@ -76,6 +76,7 @@ span{
 p{
     font-family: var(--Lexend);
     color: var(--text-light);
+    text-align: justify;
 }
 
 /* ------x------- Global Classes -------x-------*/
@@ -83,7 +84,7 @@ p{
 /* --------------- navbar ----------------- */
 
 .nav{
-    background: #eddcc7;
+    background: #B2B2B2;
     padding: 0 2rem;
     height: 0rem;
     min-height: 10vh;
@@ -419,7 +420,7 @@ main .post-content .post-title a{
 
 footer.footer{
     height: 100%;
-    background: #402d33;
+    background: #B2B2B2;
     position: relative;
 }
 
