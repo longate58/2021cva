@@ -89,18 +89,19 @@ p{
 /* --------------- navbar ----------------- */
 
 .nav{
-    background: #2E75B6; /* color grisal */
+    background: #2E75B6; /* color de fondo encabezado */
     padding: 0 2rem;
     height: 0rem;
     min-height: 10vh;
     overflow: hidden;
     transition: height 1s ease-in-out;
 }
+
 .nav .items a{    
     text-decoration: none;
     color: var(--text-white);
 }
-}
+
 .nav .nav-menu{    
     justify-content: space-between;
 }
@@ -139,6 +140,7 @@ p{
     position: relative;
     font-family: var(--Abel);
     font-size: 1.1rem;
+
 }
 
 .nav .nav-items .nav-link:hover{
@@ -146,7 +148,7 @@ p{
 }
 
 .nav .nav-items .nav-link:hover a{
-    color: var(--white);
+    color: var(--text-gray);
 }
 
 .nav .nav-brand a{
@@ -166,7 +168,7 @@ p{
 }
 
 .nav .social i:hover{
-    color: #a1c4cf;
+    color: #FFFFFF;
 }
 
 /* -------x------- navbar ---------x------- */
@@ -201,7 +203,7 @@ main .site-title .btn{
 main .site-title .btn:hover{
     background: transparent;
     border: 1px solid var(--white);
-    color: var(--white);
+    color: var(--gray);
 }
 
 /* --------x------ Site title --------x------- */
@@ -238,7 +240,7 @@ main .blog-content .btn-blog{
     padding: .7rem 2rem;
     background: var(--sky);
     margin: .5rem;
-    color: var(--white);
+
 }
 
 main .blog-content span{
