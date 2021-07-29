@@ -412,6 +412,7 @@ main .post-content .post-title a{
     padding: .8rem 32%;
     margin: 1rem 0;
     background: var(--sky);
+    color: var(--white);
 }
 
 .site-content .sidebar .popular-tags{
