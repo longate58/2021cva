@@ -16,7 +16,7 @@ html, body{
     --text-light : #686666da; /* color de de texto contenido */
     --bg-color: #0f0f0f; /* color de texto general */
     --white: #ffffff; /* color de de texto pie de pagina */
-    --midnight: #057794; /* color de fondo barra de inicio */
+    --midnight: #023644; /* color de fondo barra de inicio */
 
     /* gradient color   */
     --sky: linear-gradient(120deg, #3D89CF 0%, #3D89CF 100%); /* color de fondo anuncios */
@@ -34,7 +34,7 @@ html, body{
 
 a{
     text-decoration: none;
-    color: var(--text-gray);
+    color: var(--textgray);
 }
 
 .flex-row{
@@ -99,7 +99,6 @@ p{
 
 .nav .items a{    
     text-decoration: none;
-    color: var(--text-white);
 }
 
 .nav .nav-menu{    
@@ -140,6 +139,7 @@ p{
     position: relative;
     font-family: var(--Abel);
     font-size: 1.1rem;
+        color: var(--text-white);
 
 }
 
@@ -148,7 +148,7 @@ p{
 }
 
 .nav .nav-items .nav-link:hover a{
-    color: var(--text-gray);
+    color: var(--text-white);
 }
 
 .nav .nav-brand a{
@@ -240,6 +240,7 @@ main .blog-content .btn-blog{
     padding: .7rem 2rem;
     background: var(--sky);
     margin: .5rem;
+    color: var(--text-white);
 
 }
 
@@ -343,6 +344,7 @@ main .post-content .post-title a{
     border-radius: 2rem;
     margin: 0 .3rem;
     font-family: var(--Lexend);
+    color: var(--text-gray);
 }
 
 .site-content .pagination .pages{
