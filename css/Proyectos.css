@@ -9,6 +9,7 @@
 
     /*      Theme colors        */
     --text-gray: #3f4954;
+    --text-white: #ffffff;
     --text-light : #0071b3;
     --bg-color: #0f0f0f;
     --white: #ffffff;
@@ -91,6 +92,10 @@ a{
 
 .text-gray{
     color: var(--text-gray);
+}
+
+.text-white{
+    color: var(--text-white);
 }
 
 p{
@@ -447,12 +452,6 @@ footer.footer .rights{
 
 footer.footer .rights h4 a{
     color: var(--white);
-}
-
-footer.footer .move-up{
-    position: absolute;
-    right: 6%;
-    top: 50%;
 }
 
 footer.footer .move-up span{
