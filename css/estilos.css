@@ -102,7 +102,10 @@ p{
     color: var(--text-light);
 }
 
-
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
 
 /* --- --- HEADER --- --- */
 
