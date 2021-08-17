@@ -288,6 +288,46 @@ main .post-content .post-title p{
     color: #CFCFCF;
 }
 
+/* --- --- TABLAS --- --- */
+
+table{
+    margin-top: 5px;/* ----- Separa del tope ---*/
+    caption-side:top;  /* ----- Colocar leyenda ---*/
+    margin-left: auto; /* ----- Lugar de la tabla ---*/
+    margin-right: auto;
+    border-collapse: collapse;/* ----- Une las lineas ---*/
+    width: 600px;
+    text-align: center;
+}
+
+th{
+    background-color: #246355;
+    border-bottom: solid 5px;
+    color: white;
+    font-family: var(--Lexend);
+}
+td{
+    font-family: var(--Lexend);
+    color: var(--text-light);
+}
+
+caption{
+    padding-top: 5px;
+    font-style: italic;
+    font-family: var(--Anton);
+    font-size: 1.5rem;
+    text-align:center;
+}
+td, th{ /* ----- hacer lineas internas ---*/
+    border: 1px solid black;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+
+}
+
+/* --- --- TABLAS --- --- */
 
 /* --- --- ASIDE --- --- */
 
