@@ -13,12 +13,24 @@
 		<link rel="shortcut icon" href="assets/Blog-post/ceva.webp" type="image/x-icon">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
 		<link rel="stylesheet" href="css/Proyectos.css">
+		
+		<!---INICIO CSS DEL MAPA --->
 
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
             integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
             crossorigin="" />
+		
+		<!---FIN CSS DEL MAPA --->
+	
 
+	<style>
 
+	#myMap { 
+    width: 100%;
+    height: 580px;
+    box-shadow: 5px 5px 5px #888;
+ 	}
+	</style>
 
 	</head>
 
@@ -39,6 +51,19 @@
 
 		<!---CONTENIDO PRINCIPAL --->
 		<main>
+					<!---INICIO JAVA SCRIP MAPA --->  
+
+            <div id="myMap" style="height: 600px"></div>
+                <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+                       	integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+                       	crossorigin="">
+                       	
+                       	
+
+                </script>
+                <script src="js/map.js"></script>
+ 					
+ 					<!---FIN JAVA SCRIP MAPA ---> 
 
             <section class="container">
 				<div class="site-content">
@@ -49,24 +74,14 @@
                             <div class="post-title">
                                 <a href="#">POTENCIALIDAD: Densidad Demográfica. </a>
                                 <p>La “Comuna VALLE ARRIBA” posee grandes extensiones de terreno montañoso, fuentes de agua natural y población agrícola dispersa, por la cual nos aseguran una potencialidad urbano-agrícola con la cual se pueden generar actividades económicas orientadas al ámbito turístico. "La “COMUNA VALLE ARRIBA” como figura de gobierno tiene la pretensión de rescatar el cauce del Río Pacairigua, con la finalidad de ver fluir sus aguas nuevamente con la majestuosidad de antaño. Las leyes nos otorgan facultades para evitar que el Río Pacairigua sea un colector de aguas residuales. <br></br>En tal sentido proponemos aprovechar las potencialidades productivas y económicas del Río Pacairigua, con la activación de una Empresa de Producción Social Comunal – EPSC, orientada a la actividad económica Turística: la cual se encargará de ofertar, promocionar y administrar (bajo estricto cumplimiento sanitario del COVID-19) paquetes turísticos, los cuales estarán custodiados por la milicia bolivariana (UPDI y BPDI Valle Arriba), bomberos forestales de la urbanización Valle Arriba, organismos policiales del cuadrante 10, Ministerio del Poder Popular para el Ecosocialismo (MINEC) e Instituto Nacional de Tierras (INTI). </p>
+
+	                      		<p>ÁMBITO GEOGRÁFICO.<br> La “Comuna Ecosocialista VALLE ARRIBA” se encuentra ubicada en el Estado Miranda, Municipio Zamora, al Noreste de la Ciudad de Guatire, específicamente a 10°29'20" N y 66°31'37" O, con un área equivalente a 570 hectáreas. Se conforma por Dieciocho (18) conjuntos residenciales: Bucares, Capri, Colinas de Valle Arriba, Country Villas, Jardines de Pacairigua, Florencia, Las Bonitas II, Las Flores, Londres, Mónaco, Roma, San Antonio, Sevilla, Valle Alto, Valle Encantado Encantado, Valle Ginebra, Valle Grande y Viena. <br><br/>Tres (3) zonas populares: Valle Bonito, Valle Cielo y Valle Esperanza. Dos (2) Parcelamiento agrícolas: Parceleros Valle La Paz y Parceleros Pacairigua. <br><br/>Limita al NORTE: Parque Nacional Waraira Ripano. SUR: Comuna Socialista Chaves el gigante de ámerica y Comuna Comandante Chavez. ESTE: Comuna el general Ezequiel Zamora y Comuna Ecoagricultura Turistica Victoria y Siembras de Hugo Chavez. OESTE: Comuna Comandante Chavez.</p><hr>
+	                      		
+	                      		<p>DISTRIBUCIÓN POR TIPO DE VIVIENDA.<br> En nuestro Comuna se encuentran los siguientes tipos de vivienda: 96 EDIFICIOS, 950 CASAS URBANAS, 350 CASAS RURALES, 160 RANCHOS y 45 BARRACAS. <br><br/>SERVICIOS BÁSICOS EXISTENTES.<br> Aceras, Aguas blancas, Aguas servidas, Alumbrado eléctrico, Canalización aguas de lluvia, Cancha de deporte, Electricidad medidor, Gas doméstico (GLP), Internet, Parada de bus, Recolección de basura, Transporte público, Televisión por cable y Vialidad.<br><br/> 10 PRINCIPALES CARRERAS DE PROFESIONALES GRADUADOS.<br> Administradores, Docentes, Ingenieros, Contadores, Informaticos, Médicos, Abogados, Enfermeros, Farmaceuticos y Economistas.<br><br/>10 OCUPACIONES PROFESIONALES MAS RECURRENTES.<br> Artesanos, Comerciantes, Transportistas, Funcionarios, Operadores técnicos, Bomberos, Cajeros, Operadores control de calidad, Deportistas y Secretarias.</p><hr>
+	                      		
+	                      		<p>10 ENFERMEDADES MAS RECURRENTES.<br> Hipertensión arterial, Asma, Diabetes, Insuficiencia cardiaca, Obesidad, Vulnerabilidad nutricional, Osteoporosis, Cerebro vascular, Tiroides, Insuficiencia arterial, Reumatismo y Cáncer.<br><br/> 10 DISCAPACIDADES MAS RECURRENTES.<br> Visual, Mental intelectual, Musculo -Esqueletica, Respiratoria, Cardiovascular, Autismo o Aspenger, Neurologica, Audistiva, Artritis reumatoide, Multiple, Voz y habla.<br><br/>10 BENEFICIOS SOCIALES EMBLEMATICOS.<br> Clap, Gran Misión Vivienda, Hogares de la patria, Amor mayor ó pensión, 0800 Mi Hogar, Barrio adentro - Barrio Tricolor, José Gregorio Hernández, Chamba juvenil, Lactancia materna y Parto humanizado. </p><hr>
+
                             </div>
-                    	<div id="myMap" style="height: 600px"></div>
-                      
-	
-                      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-                       integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-                       crossorigin=""></script>
-                      <script src="js/map.js"></script>
-
-                      <div class="post-title">
-
-                      		<p>ÁMBITO GEOGRÁFICO.<br> La “Comuna Ecosocialista VALLE ARRIBA” se encuentra ubicada en el Estado Miranda, Municipio Zamora, al Noreste de la Ciudad de Guatire, específicamente a 10°29'20" N y 66°31'37" O, con un área equivalente a 570 hectáreas. Se conforma por Dieciocho (18) conjuntos residenciales: Bucares, Capri, Colinas de Valle Arriba, Country Villas, Jardines de Pacairigua, Florencia, Las Bonitas II, Las Flores, Londres, Mónaco, Roma, San Antonio, Sevilla, Valle Alto, Valle Encantado Encantado, Valle Ginebra, Valle Grande y Viena. <br><br/>Tres (3) zonas populares: Valle Bonito, Valle Cielo y Valle Esperanza. Dos (2) Parcelamiento agrícolas: Parceleros Valle La Paz y Parceleros Pacairigua. <br><br/>Limita al NORTE: Parque Nacional Waraira Ripano. SUR: Comuna Socialista Chaves el gigante de ámerica y Comuna Comandante Chavez. ESTE: Comuna el general Ezequiel Zamora y Comuna Ecoagricultura Turistica Victoria y Siembras de Hugo Chavez. OESTE: Comuna Comandante Chavez.</p><hr>
-                      		
-                      		<p>DISTRIBUCIÓN POR TIPO DE VIVIENDA.<br> En nuestro Comuna se encuentran los siguientes tipos de vivienda: 96 EDIFICIOS, 950 CASAS URBANAS, 350 CASAS RURALES, 160 RANCHOS y 45 BARRACAS. <br><br/>SERVICIOS BÁSICOS EXISTENTES.<br> Aceras, Aguas blancas, Aguas servidas, Alumbrado eléctrico, Canalización aguas de lluvia, Cancha de deporte, Electricidad medidor, Gas doméstico (GLP), Internet, Parada de bus, Recolección de basura, Transporte público, Televisión por cable y Vialidad.<br><br/> 10 PRINCIPALES CARRERAS DE PROFESIONALES GRADUADOS.<br> Administradores, Docentes, Ingenieros, Contadores, Informaticos, Médicos, Abogados, Enfermeros, Farmaceuticos y Economistas.<br><br/>10 OCUPACIONES PROFESIONALES MAS RECURRENTES.<br> Artesanos, Comerciantes, Transportistas, Funcionarios, Operadores técnicos, Bomberos, Cajeros, Operadores control de calidad, Deportistas y Secretarias.</p><hr>
-                      		
-                      		<p>10 ENFERMEDADES MAS RECURRENTES.<br> Hipertensión arterial, Asma, Diabetes, Insuficiencia cardiaca, Obesidad, Vulnerabilidad nutricional, Osteoporosis, Cerebro vascular, Tiroides, Insuficiencia arterial, Reumatismo y Cáncer.<br><br/> 10 DISCAPACIDADES MAS RECURRENTES.<br> Visual, Mental intelectual, Musculo -Esqueletica, Respiratoria, Cardiovascular, Autismo o Aspenger, Neurologica, Audistiva, Artritis reumatoide, Multiple, Voz y habla.<br><br/>10 BENEFICIOS SOCIALES EMBLEMATICOS.<br> Clap, Gran Misión Vivienda, Hogares de la patria, Amor mayor ó pensión, 0800 Mi Hogar, Barrio adentro - Barrio Tricolor, José Gregorio Hernández, Chamba juvenil, Lactancia materna y Parto humanizado. </p><hr>
-                      </div>
-
                       <table>
 						<caption>Gobierno Comunitario</caption>
 						<tr><th>Descripción</th><th>Detalle</th></tr> <!-- -Columnas en negrilla------>
