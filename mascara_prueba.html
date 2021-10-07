@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="js/vecinos.js"></script>
+    <style>
+     body {margin:0; padding:0;}
+     #map {position:absolute; top:0; bottom:0; width:100%;}
+    </style>
+  </head>
+  <body>
+   <div id="map"></div>
+    <script>
+  var map = L.map('map').
+  setView([10.4829, -66.5287], 
+  18);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+      maxZoom: 18
+  }).addTo(map);
+  var vecinos = L.geoJson(vecinos,{
+     onEachFeature: function(feature, layer){
+        layer.bindPopup(feature.properties["nombre"] + '<br>'+ '(' + feature.properties["direccion"] + ')')
+     }
+  }).addTo(map);
+    </script>
+  </body> 
+</html>
