@@ -1,40 +1,24 @@
 <!DOCTYPE html>
-
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
+		<head>
+			<meta charset="UTF-8">
 
-		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+			<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Indicadores</title>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-		<link rel="shortcut icon" href="assets/Blog-post/ceva.webp" type="image/x-icon">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
-		<link rel="stylesheet" href="css/Proyectos.css">
-		
-		<!---INICIO CSS DEL MAPA --->
+			<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui' />
+			<title>Cartografía</title>
+			<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+			<link rel="shortcut icon" href="assets/Blog-post/ceva.webp" type="image/x-icon">
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+			<link href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css' rel='stylesheet' />
+			<link rel="stylesheet" href="css/Proyectos.css">	
+			<link rel="stylesheet" href="css/map.css">
 
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-            crossorigin="" />
-		
-		<!---FIN CSS DEL MAPA --->
-	
 
-	<style>
+		</head>
 
-	#myMap { 
-    width: 100%;
-    height: 580px;
-    box-shadow: 5px 5px 5px #888;
- 	}
-	</style>
-
-	</head>
-
-	<body>
+		<body>
 		<!---ENCABEZADO DE LA PAGINA --->
 			<div class="contenedor">
 				<header class="contenido-principal">
@@ -50,20 +34,12 @@
 		<!--- FIN ENCABEZADO DE LA PAGINA --->
 
 		<!---CONTENIDO PRINCIPAL --->
-		<main>
-					<!---INICIO JAVA SCRIP MAPA --->  
-
-            <div id="myMap" style="height: 600px"></div>
-                <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-                       	integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-                       	crossorigin="">
-                       	
-                       	
-
-                </script>
-                <script src="js/map.js"></script>
- 					
- 					<!---FIN JAVA SCRIP MAPA ---> 
+			<main>
+				<!---INICIO JAVA SCRIP MAPA ---> 
+				<div id='map'></div>
+					<script src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet-src.js'></script>
+					<script src="js/map.js"></script>
+				<!---FIN JAVA SCRIP MAPA ---> 
 
             <section class="container">
 				<div class="site-content">
@@ -154,45 +130,49 @@
 		                </div>
 		            </aside>
 					<!---CONTENIDO INDIRECTO AL MAIN --->
-			</section>
-		</main>
+			</section>			
+
+
+			</main>
 		<!---FIN CONTENIDO PRINCIPAL --->
 
 		<!---PIE DE PAGINA --->
-		<footer class="footer">
-            <div class="container">
-                <div class="about-us" data-aos="fade-right" data-aos-delay="200">
-                    <h2>Nosotros</h2>
-                    <p>Pretendemos crear una reputación producto de nuestro trabajo y la medimos de acuerdo al cumplimiento de nuestros objetivos.</p>
-                </div>
-                <div class="follow" data-aos="fade-left" data-aos-delay="200">
-                    <h2>Siguenos</h2>
-                    <p>Nuestras redes sociales</p>
-                    <div>
-                        <a href="https://twitter.com/2021cva"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/2021cva"><i class="fab fa-instagram"></i></a>
-                        <a href="www.facebook.com//2021cva"><i class="fab fa-facebook-f"></i></a>
-                        <i class="fab fa-youtube"></i>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="rights flex-row">
-                <h4 class="text-white">
-                    Copyright ©2021 Todos los derechos reservados | Hecho por Long Art Digital
-               
-                </h4>
-            </div>
-        </footer>					
-		<!---FIN PIE DE PAGINA --->
+			<footer class="footer">
+	            <div class="container">
+	                <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+	                    <h2>Nosotros</h2>
+	                    <p>Pretendemos crear una reputación producto de nuestro trabajo y la medimos de acuerdo al cumplimiento de nuestros objetivos.</p>
+	                </div>
+	                <div class="follow" data-aos="fade-left" data-aos-delay="200">
+	                    <h2>Siguenos</h2>
+	                    <p>Nuestras redes sociales</p>
+	                    <div>
+	                        <a href="https://twitter.com/2021cva"><i class="fab fa-twitter"></i></a>
+	                        <a href="https://www.instagram.com/2021cva"><i class="fab fa-instagram"></i></a>
+	                        <a href="www.facebook.com//2021cva"><i class="fab fa-facebook-f"></i></a>
+	                        <i class="fab fa-youtube"></i>
+	                        
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="rights flex-row">
+	                <h4 class="text-white">
+	                    Copyright ©2021 Todos los derechos reservados | Hecho por Long Art Digital
+	               
+	                </h4>
+	            </div>
+	        </footer>					
+			<!---FIN PIE DE PAGINA --->
 
 
 
-		<!---libreria del carousel --->
-		<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-		<!---libreria del carousel --->
-		<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-		<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-		<script src="js/app.js"></script>	
-	</body>
+			<!---libreria del carousel --->
+			<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+			<!---libreria del carousel --->
+			<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+			<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+			<script src="js/app.js"></script>	
+
+
+		</body>
 </html>
