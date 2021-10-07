@@ -5,6 +5,9 @@ var osmBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
 /// ---- Polígono  ----
 
@@ -388,13 +391,3 @@ L.control.layers(baseMaps, overlayMaps,{
 }).addTo(map);
 
 
-//---------------------------------------------------
-//Agrega nuestro marcador
-    let iconMarker = L.icon({ 
-        iconUrl: 'assets/marker.png',
-        iconSize: [35, 60],
-        iconAnchor: [30, 60]
-    })
-
-    let marker2 = L.marker([10.4819, -66.5297], { icon: iconMarker }).addTo(myMap)
-L.control.scale().addTo(myMap);
