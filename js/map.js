@@ -376,18 +376,11 @@ var polygon = new L.geoJson(geojsonFeaturePolygon, {
   style: stylePolygon
 }).addTo(map);
 
-var baseMaps = {
-  "OSM": osmBase
-};
 
 var overlayMaps = {
-  "Línea": line,
-  "Polígono": polygon
+   "Polígono": polygon
 };
 
-L.control.layers(baseMaps, overlayMaps,{
-  position: 'topright', // 'topleft', 'bottomleft', 'bottomright'
-  collapsed: false // true
-}).addTo(map);
+
 
 
