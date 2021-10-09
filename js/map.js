@@ -1,13 +1,33 @@
-var map = L.map('map').setView([10.4869, -66.5287], 14); // Málaga
+var map = L.map('map').setView([10.4869, -66.5287], 14); // Comuna Ecosocialista Valle Arriba 
 
 var osmBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap<\/a> contributors Long Art Digital'
+  attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap<\/a> contributors Long Art Digital'
 }).addTo(map);
 
+  
 
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+//-------------SELECCIONAR CONJUNTO COMUNAL-----------------------------------------
+
+document.getElementById('select-location').addEventListener('change', function(e){
+  let coords = e.target.value.split(",")
+  map.flyTo(coords,13);
+
+
+})
+//------------------------------------------------------
+
+
+
+ 
+
+
+
+
+
+
+
+
+
 
 /// ---- Polígono  ----
 
@@ -376,11 +396,26 @@ var polygon = new L.geoJson(geojsonFeaturePolygon, {
   style: stylePolygon
 }).addTo(map);
 
-
-var overlayMaps = {
-   "Polígono": polygon
+var baseMaps = {
+  "OSM": osmBase
 };
 
+var overlayMaps = {
+  "Línea": line,
+  "Polígono": polygon
+};
+
+L.control.layers(baseMaps, overlayMaps,{
+  position: 'topright', // 'topleft', 'bottomleft', 'bottomright'
+  collapsed: false // true
+}).addTo(map);
 
 
+    let iconMarker = L.icon({ //Agrega nuestro marcador
+        iconUrl: 'assets/marker.png',
+        iconSize: [35, 60],
+        iconAnchor: [30, 60]
+    })
+
+let marker2 = L.marker([10.4769721, -66.5322674], { icon: iconMarker }).addTo(Map)
 
