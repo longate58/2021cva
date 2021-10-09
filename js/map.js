@@ -1,16 +1,17 @@
 var map = L.map('map').setView([10.4869, -66.5287], 14); // Comuna Ecosocialista Valle Arriba 
 
 var osmBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap<\/a> contributors Long Art Digital'
+  attribution: '&copy; <a href="www.openstreetmap.org/copyright">OpenStreetMap</a> contributors Long Art Digital'
 }).addTo(map);
 
   
 
 //-------------SELECCIONAR CONJUNTO COMUNAL-----------------------------------------
 
-document.getElementById('select-location').addEventListener('change', function(e){
-  let coords = e.target.value.split(",")
-  map.flyTo(coords,13);
+document.getElementById('select-location').addEventListener('change', function(e) {
+  console.log(e.target.value)
+  let coords = e.target.value.split(",");
+  map.flyTo(coords, 18);
 
 
 })
@@ -32,14 +33,11 @@ document.getElementById('select-location').addEventListener('change', function(e
 /// ---- Polígono  ----
 
 var geojsonFeaturePolygon = [
-  {
-    "type": "Feature",
+  {"type": "Feature",
     "properties": {},
     "geometry": {
       "type": "Polygon",
-      "coordinates": [
-        [
-          [-66.522846400,  10.476465600],
+      "coordinates": [[[-66.522846400,  10.476465600],
           [-66.522475500,  10.477186200],
           [-66.523297800,  10.477924700],
           [-66.523690600,  10.478277400],
@@ -374,13 +372,7 @@ var geojsonFeaturePolygon = [
           [-66.522770600,  10.475499700],
           [-66.522721100,  10.475597200],
           [-66.522710900,  10.475617300],
-          [-66.522846400,  10.476465600]
-
-        ]
-      ]
-    }
-  }
-];
+          [-66.522846400,  10.476465600] ]]}}]
 
 function stylePolygon(feature) {
   return {
