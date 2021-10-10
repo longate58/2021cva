@@ -7,13 +7,7 @@ var osmBase = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 
 
 
-//-------------SELECCIONAR CONJUNTO COMUNAL-----------------------------------------
 
-document.getElementById('select-location').addEventListener('change', function(e) {
-  console.log(e.target.value)
-  let coords = e.target.value.split(",");
-  map.flyTo(coords, 18);
-})
 
 
 
