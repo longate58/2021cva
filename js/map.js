@@ -375,14 +375,13 @@ function stylePolygon(feature) {
     fillColor: 'yellow', // color de relleno
     fillOpacity: 0.18 // transparencia de relleno
   };
-}
+};
 
 var polygon = new L.geoJson(geojsonFeaturePolygon, {
   style: stylePolygon
 }).addTo(map);
 
 
-//------------------------------------------------------
 var baseMaps = {
   "OSM": osmBase
 };
@@ -394,7 +393,7 @@ var overlayMaps = {
 
 //------------------------------------------------------
 L.control.layers(baseMaps, overlayMaps,{
-  position: 'topright', // 'topleft', 'bottomleft', 'bottomright'
+  position: 'bottomleft', // 'topleft', 'bottomleft', 'bottomright', 'topright'
   collapsed: false // true
 }).addTo(map);
 
