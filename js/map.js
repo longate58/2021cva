@@ -382,27 +382,21 @@ var polygon = new L.geoJson(geojsonFeaturePolygon, {
 }).addTo(map);
 
 
-var baseMaps = {
-  "OSM": osmBase
-};
+//------------------------------------------------------
 
-var overlayMaps = {
-  "Línea": line,
-  "Polígono": polygon
-};
+
+
+
+
+
 
 //------------------------------------------------------
-L.control.layers(baseMaps, overlayMaps,{
-  position: 'bottomleft', // 'topleft', 'bottomleft', 'bottomright', 'topright'
-  collapsed: false // true
-}).addTo(map);
+
+
+
+
+
 
 //------------------------------------------------------
-    let iconMarker = L.icon({ //Agrega nuestro marcador
-        iconUrl: 'assets/marker.png',
-        iconSize: [35, 60],
-        iconAnchor: [30, 60]
-    })
 
-let marker2 = L.marker([10.4769721, -66.5322674], { icon: iconMarker }).addTo(Map)
-//------------------------------------------------------
+
