@@ -21,6 +21,9 @@
 			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
 			  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
 			  crossorigin=""/>
+
+			<link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
+			<script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>  
 			
 			
 
@@ -67,12 +70,17 @@
 					        </select> 
 
 
+
+
 				<!---INICIO OPCIONES DEL MAPA ---> 
 
 
 				<!---INICIO JAVA SCRIP MAPA ---> 
 				
 				<div id='map'></div>
+
+
+
 					<script src="js/map.js"></script>
 
 					<script>
@@ -87,6 +95,10 @@
 					<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 			  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
 			  crossorigin=""></script>
+
+				
+
+
 
 
 
@@ -110,78 +122,73 @@
 	                      		<p>10 ENFERMEDADES MAS RECURRENTES.<br> Hipertensión arterial, Asma, Diabetes, Insuficiencia cardiaca, Obesidad, Vulnerabilidad nutricional, Osteoporosis, Cerebro vascular, Tiroides, Insuficiencia arterial, Reumatismo y Cáncer.<br><br/> 10 DISCAPACIDADES MAS RECURRENTES.<br> Visual, Mental intelectual, Musculo -Esqueletica, Respiratoria, Cardiovascular, Autismo o Aspenger, Neurologica, Audistiva, Artritis reumatoide, Multiple, Voz y habla.<br><br/>10 BENEFICIOS SOCIALES EMBLEMATICOS.<br> Clap, Gran Misión Vivienda, Hogares de la patria, Amor mayor ó pensión, 0800 Mi Hogar, Barrio adentro - Barrio Tricolor, José Gregorio Hernández, Chamba juvenil, Lactancia materna y Parto humanizado. </p><hr>
 
                             </div>
-                      <table>
-						<caption>Gobierno Comunitario</caption>
-						<tr><th>Descripción</th><th>Detalle</th></tr> <!-- -Columnas en negrilla------>
-						<tr><td>SITUR</td><td>C-MIX-2021-05-0009</td></tr>
-						<tr><td>Municipio</td><td>Zamora</td></tr>
-						<tr><td>Parroquia</td><td>Guatire</td></tr>
-						<tr><td>Urbanización</td><td>Valle Arriba</td></tr>
-						<tr><td>Cuadrante de Paz</td><td>10</td></tr>
-						<tr><td>Familias</td><td>5.000</td></tr>
-						<tr><td>Habitantes</td><td>10.500</td></tr>
-					</table>
-					<!--  ------>
-					<table>
-						<caption>Caracterización Social</caption>
-						<tr><th>Descripción</th><th>Cantidad</th></tr><!-- -Filas ------>
-						<tr><td>Consejos Comunales</td><td>12</td></tr>
-						<tr><td>UBCH</td><td>03</td></tr>			
-						<tr><td>Centros de Salud</td><td>04</td></tr>
-						<tr><td>Barrio Adentro - Tipo 1</td><td>03</td></tr>
-						<tr><td>Ambulatorio</td><td>00</td></tr>
-						<tr><td>Sala Rehabilitación Integral (SRI)</td><td>01</td></tr>
-						<tr><td>Centro Diagnostico Integral (CDI)</td><td>01</td></tr>
-						<tr><td>Hospitales</td><td>00</td></tr>
-						<tr><td>Centros Electorales</td><td>02</td></tr>
-						<tr><td>Centros Educativos</td><td>02</td></tr>
-						<tr><td>Pre escolar</td><td>00</td></tr>
-						<tr><td>Escuelas</td><td>02</td></tr>
-						<tr><td>Liceos</td><td>00</td></tr>
-						<tr><td>Universidades</td><td>00</td></tr>
-					</table>
-					<!--  ------>
-					<table>
-						<caption>Voceros Gobierno Comunitario</caption>
-						<tr><th>Denominación</th><th>Nombre y Apellido</th><th>Telefóno</th></tr>
-						<tr><td>Cuadrante de Paz</td><td>Lesbia Henriquez</td><td>(0412) 736.7791</td></tr>
-						<tr><td>Poder Popular</td><td>Ninoska Palencia</td><td>(0412) 718.4352</td></tr>
-						<tr><td>Salud (ASIC)</td><td>Diana Palacios</td><td>(0412) 703.9279</td></tr>
-						<tr><td>Educación</td><td>Polina Aponte</td><td>(0424) 256.2807</td></tr>
-						<tr><td>Juventud</td><td>Genesis Rodriguez</td><td>(0426) 060.4438</td></tr>
-						<tr><td>Economía</td><td>Wilmer Abreu</td><td>(0424) 239.2208</td></tr>
-						<tr><td>Milicia</td><td>Juan Quintana</td><td>(0212) 342.9392</td></tr>
-						<tr><td>Parto Humanizado</td><td></td><td></td></tr>			
-					</table>
-
-
-
-
-                    </div>                    
-                </div>
+		                    <table>
+								<caption>Gobierno Comunitario</caption>
+								<tr><th>Descripción</th><th>Detalle</th></tr> <!-- -Columnas en negrilla------>
+								<tr><td>SITUR</td><td>C-MIX-2021-05-0009</td></tr>
+								<tr><td>Municipio</td><td>Zamora</td></tr>
+								<tr><td>Parroquia</td><td>Guatire</td></tr>
+								<tr><td>Urbanización</td><td>Valle Arriba</td></tr>
+								<tr><td>Cuadrante de Paz</td><td>10</td></tr>
+								<tr><td>Familias</td><td>5.000</td></tr>
+								<tr><td>Habitantes</td><td>10.500</td></tr>
+							</table>
+							<!--  ------>
+							<table>
+								<caption>Caracterización Social</caption>
+								<tr><th>Descripción</th><th>Cantidad</th></tr><!-- -Filas ------>
+								<tr><td>Consejos Comunales</td><td>12</td></tr>
+								<tr><td>UBCH</td><td>03</td></tr>			
+								<tr><td>Centros de Salud</td><td>04</td></tr>
+								<tr><td>Barrio Adentro - Tipo 1</td><td>03</td></tr>
+								<tr><td>Ambulatorio</td><td>00</td></tr>
+								<tr><td>Sala Rehabilitación Integral (SRI)</td><td>01</td></tr>
+								<tr><td>Centro Diagnostico Integral (CDI)</td><td>01</td></tr>
+								<tr><td>Hospitales</td><td>00</td></tr>
+								<tr><td>Centros Electorales</td><td>02</td></tr>
+								<tr><td>Centros Educativos</td><td>02</td></tr>
+								<tr><td>Pre escolar</td><td>00</td></tr>
+								<tr><td>Escuelas</td><td>02</td></tr>
+								<tr><td>Liceos</td><td>00</td></tr>
+								<tr><td>Universidades</td><td>00</td></tr>
+							</table>
+							<!--  ------>
+							<table>
+								<caption>Voceros Gobierno Comunitario</caption>
+								<tr><th>Denominación</th><th>Nombre y Apellido</th><th>Telefóno</th></tr>
+								<tr><td>Cuadrante de Paz</td><td>Lesbia Henriquez</td><td>(0412) 736.7791</td></tr>
+								<tr><td>Poder Popular</td><td>Ninoska Palencia</td><td>(0412) 718.4352</td></tr>
+								<tr><td>Salud (ASIC)</td><td>Diana Palacios</td><td>(0412) 703.9279</td></tr>
+								<tr><td>Educación</td><td>Polina Aponte</td><td>(0424) 256.2807</td></tr>
+								<tr><td>Juventud</td><td>Genesis Rodriguez</td><td>(0426) 060.4438</td></tr>
+								<tr><td>Economía</td><td>Wilmer Abreu</td><td>(0424) 239.2208</td></tr>
+								<tr><td>Milicia</td><td>Juan Quintana</td><td>(0212) 342.9392</td></tr>
+								<tr><td>Parto Humanizado</td><td></td><td></td></tr>			
+							</table>
+                    	</div>                    
+                	</div>
 
 				<!---CONTENIDO INDIRECTO AL MAIN --->
-	            <aside class="sidebar">
-	                <div class="popular-post">
-	                	<hr>
-	                    <h2>ESTADÍSTICAS.</h2>
-	                    <div class="post-content" data-aos="flip-up" data-aos-delay="200">
-	                    	<div class="post-info flex-row"> <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;14 de julio 2020</span></div>
-		                    
-		                    <div><img loading="lazy" src="assets/GRAFICOS/PIRAMIDE.webp" class="img" alt="blog1"></div>
-	                        </div><hr>
-	                        <div><img loading="lazy" src="assets/GRAFICOS/SEXO.webp" class="img" alt="blog1"></div>
-	                        </div><hr>
-	                        <div><img loading="lazy" src="assets/GRAFICOS/educacion.webp" class="img" alt="blog1"></div>
-	                        </div>
-                       		<div class="post-title"> <a href="index.html"></a></div>
-        					<nav>
-            					<a href="index.html"><img loading="lazy" src="assets/home.webp" alt="" ></a>
-	           
-    					    </nav>
-
+		            <aside class="sidebar">
+		                <div class="popular-post">
+		                	<hr>
+		                    <h2>ESTADÍSTICAS.</h2>
+		                    <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+		                    	<div class="post-info flex-row"> <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;14 de julio 2020</span>
+		                    </div>
+			                <div><img loading="lazy" src="assets/GRAFICOS/PIRAMIDE.webp" class="img" alt="blog1"></div>
+		                    </div><hr>
+		                    <div><img loading="lazy" src="assets/GRAFICOS/SEXO.webp" class="img" alt="blog1"></div>
+		                    </div><hr>
+		                    <div><img loading="lazy" src="assets/GRAFICOS/educacion.webp" class="img" alt="blog1"></div>
+		                        
 		                </div>
-		            </aside>
+	                    <div class="post-title"> <a href="index.html"></a></div>
+	        			<nav><a href="index.html"><img loading="lazy" src="assets/home.webp" alt="" ></a></nav>
+	        			</aside>
+				</div>
+
+			        
 					<!---CONTENIDO INDIRECTO AL MAIN --->
 			</section>			
 
