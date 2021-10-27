@@ -97,8 +97,6 @@ var circle = L.circle ([10.484830000, -66.530496300], {
 
 
 
-
-
 //-------------SELECCIONAR CONJUNTO COMUNAL-----------------------------------------
 
 document.getElementById('select-location').addEventListener('change', function(e) {
@@ -404,6 +402,39 @@ var polygon = new L.geoJson(geojsonFeaturePolygon, {
 }).addTo(map);
 
 //------------Fin poligono------------------------------------------
+
+var populationLegend = L.control({position: 'bottomright'});
+var populationChangeLegend = L.control({position: 'bottomright'});
+
+populationLegend.onAdd = function (map) {
+var div = L.DomUtil.create('div', 'info legend');
+    div.innerHTML +=
+    '<img src="assets/leyenda.png" alt="legend" width="234" height="247">';
+return div;
+};
+
+populationChangeLegend.onAdd = function (map) {
+var div = L.DomUtil.create('div', 'info legend');
+    div.innerHTML +=
+    '<img src="change_leyenda.png" alt="legend" width="234" height="247">';
+return div;
+};
+
+// Add this one (only) for now, as the Population layer is on by default
+populationLegend.addTo(map);
+
+map.on('overlayadd', function (eventLayer) {
+    // Switch to the Population legend...
+    if (eventLayer.name === 'Population') {
+        this.removeControl(populationChangeLegend);
+        populationLegend.addTo(this);
+    } else { // Or switch to the Population Change legend...
+        this.removeControl(populationLegend);
+        populationChangeLegend.addTo(this);
+    }
+});
+
+
 
 
 
