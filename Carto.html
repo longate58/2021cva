@@ -1,118 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-		<head>
-			<meta charset="UTF-8">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-			<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+            <title>Cartografia</title>
 
-			<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui' />
+            <link href="https://fonts.googleapis.com/css2?family=Helvaticat&family=Open+Sans&display=swap" rel="stylesheet"> 
+            <link rel="shortcut icon" href="assets/Blog-post/ceva.webp" type="image/x-icon">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>	
+            <link rel="stylesheet" type="text/css" href="css/mapa.css">
+            <link rel="stylesheet" type="text/css" href="Leaflet-MiniMap-master/dist/Control.MiniMap.min.css">
+            <link rel="stylesheet" type="text/css" href="Leaflet.Legend-master/src/leaflet.legend.css">
+            <link rel="shortcut icon" href="assets/Blog-post/ceva.webp" type="image/x-icon">
+            <link rel="stylesheet" href="css/Proyectos.css">    
+        </head>
 
-			<title>Cartografía</title>
+        <body>
+        <!---ENCABEZADO DE LA PAGINA --->
+            <div class="contenedor">
+                <header class="contenido-principal">
+                    <img loading="lazy" src="assets/Proyectos/14.webp" alt="" class="contenido-principal__imagen">
+                    <div class="contenido-principal__contenedor">
+                        <h1 class="contenido-principal__titulo">CARTOGRAFÍA TEMATÍCA</h1>
+                        <p class="contenido-principal__resumen">
+                             La Comuna Ecosocialista VALLE ARRIBA para monitorear sus actividades propone la creación de indicadores demográficos y de gestión, los cuales permitan resumir la evolución histórica del comportamiento demográficos básicos en correlación a las Cifras de población de residentes en el Municipio Zamora, del Estado Bolivariano de Miranda. Adicional al control y ejecución de los proyectos asociados al buen vivir de la Comuna Ecosocialista VALLE ARRIBA.
+                        </p>
+                    </div>
+                </header>
+        <!--- FIN ENCABEZADO DE LA PAGINA --->  
+        
+        <!---CONTENIDO PRINCIPAL --->
+                <main>
+                <!---INICIO OPCIONES DEL MAPA ---> 
+                    <select name="select-location" id="select-location">
+                        <option value="-1">Seleccione un lugar</option>   
+                        <option value="10.491669700, -66.528557900">CAPRI Y MONACO</option>
+                        <option value="10.490442200, -66.535409700">COLINAS DE VALLE ARRIBA</option>
+                        <option value="10.476947500, -66.52480500">COLINAS DE VALLE CIELO</option>
+                        <option value="10.482387600, -66.532264900">CONJUNTO LONDRES</option>
+                        <option value="10.476791600, -66.531925700">GIRAZOLES DE ZAMORA</option>
+                        <option value="10.474076000, -66.530925900">FLORES DE VALLE ARRIBA</option>
+                        <option value="10.474915700, -66.528333600">LOMAS DE VALLE CIELO</option>
+                        <option value="10.487345500, -66.525346200">TRIUNFADORES VALLE BONITO</option>
+                        <option value="10.476423900, -66.527149400">VALLE CIELO</option>
+                        <option value="10.483971800, -66.537229600">VALLE ENCANTADO</option>
+                        <option value="10.478591200, -66.529139600">VALLE ESPERANZA</option>
+                        <option value="10.484830000, -66.530496300">VALLE GINEBRA</option>  
+                    </select>
+                <!---INICIO JAVA SCRIP MAPA ---> 
+                    <div id="map"></div>
 
-			
-			<link href="https://fonts.googleapis.com/css2?family=Helvaticat&family=Open+Sans&display=swap" rel="stylesheet"> 
-			
-			<link rel="shortcut icon" href="assets/Blog-post/ceva.webp" type="image/x-icon">
-						
-			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-			<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+                    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                   		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+                   		crossorigin=""></script>
+                    <script src="Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>   
+                    <script src="Leaflet.Legend-master/src/leaflet.legend.js"></script> 
+                    <script src="layers/barrios.js"></script>
+                    <script src="js/mapa.js"></script>
+                <!---FIN JAVA SCRIP MAPA ---> 
 
-
-			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""/>
-			<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-			  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-			  crossorigin=""></script>
-
-			<link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet">
-			<script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>  
-			
-			
-
-			<link rel="stylesheet" href="css/Proyectos.css">	
-			<link rel="stylesheet" href="css/map.css">
-
-
-
-		</head>
-
-		<body>
-		<!---ENCABEZADO DE LA PAGINA --->
-			<div class="contenedor">
-				<header class="contenido-principal">
-					<img loading="lazy" src="assets/Proyectos/14.webp" alt="" class="contenido-principal__imagen">
-					<div class="contenido-principal__contenedor">
-						<h1 class="contenido-principal__titulo">CARTOGRAFÍA TEMATÍCA</h1>
-						<p class="contenido-principal__resumen">
-							 La Comuna Ecosocialista VALLE ARRIBA para monitorear sus actividades propone la creación de indicadores demográficos y de gestión, los cuales permitan resumir la evolución histórica del comportamiento demográficos básicos en correlación a las Cifras de población de residentes en el Municipio Zamora, del Estado Bolivariano de Miranda. Adicional al control y ejecución de los proyectos asociados al buen vivir de la Comuna Ecosocialista VALLE ARRIBA.
-						</p>
-					</div>
-				</header>
-
-		<!--- FIN ENCABEZADO DE LA PAGINA --->
-
-		<!---CONTENIDO PRINCIPAL --->
-			<main>
-				<!---INICIO OPCIONES DEL MAPA ---> 
-							<h2>Visita los Consejos Comunales de la Comuna EVA</h2>
-					        <select name="select-location" id="select-location">
-					        	<option value="1">Selecciones un Lugar</option>
-					        	<option value="10.491669700, -66.528557900">CAPRI Y MONACO</option>
-					        	<option value="10.490442200, -66.535409700">COLINAS DE VALLE ARRIBA</option>
-					        	<option value="10.476947500, -66.52480500">COLINAS DE VALLE CIELO</option>
-					        	<option value="10.482387600, -66.532264900">CONJUNTO LONDRES</option>
-					        	<option value="10.476791600, -66.531925700">GIRAZOLES DE ZAMORA</option>
-					        	<option value="10.474076000, -66.530925900">FLORES DE VALLE ARRIBA</option>
-					        	<option value="10.474915700, -66.528333600">LOMAS DE VALLE CIELO</option>
-					        	<option value="10.487345500, -66.525346200">TRIUNFADORES VALLE BONITO</option>
-					        	<option value="10.476423900, -66.527149400">VALLE CIELO</option>
-					        	<option value="10.483971800, -66.537229600">VALLE ENCANTADO</option>
-					        	<option value="10.478591200, -66.529139600">VALLE ESPERANZA</option>
-					        	<option value="10.484830000, -66.530496300">VALLE GINEBRA</option>
-					        </select> 
-
-
-
-
-				<!---INICIO OPCIONES DEL MAPA ---> 
-
-
-				<!---INICIO JAVA SCRIP MAPA ---> 
-				
-				<div id='map'></div>
-
-
-
-					<script src="js/map.js"></script>
-
-					<script>
-						L.control.scale({
-						    metric: true,
-						    imperial: false,
-						    position: 'bottomleft'
-						}).addTo(map);
-
-					</script>
-
-					<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-						  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-						  crossorigin="">
-						  	
-					</script>
-
-					<script src="Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>   
-    				<script src="Leaflet.Legend-master/src/leaflet.legend.js"></script>
-
-
-
-
-
-
-				<!---FIN JAVA SCRIP MAPA ---> 
-
-            <section class="container">
-				<div class="site-content">
+                <section class="container">
+                    <div class="site-content">
                     <div class="posts">
                          <hr>
                         <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
@@ -121,124 +73,120 @@
                                 <a href="#">POTENCIALIDAD: Densidad Demográfica. </a>
                                 <p>La “Comuna ECOSOCIALISTA VALLE ARRIBA - EVA” como figura de gobierno tiene la pretensión de rescatar el cauce del Río  y la Quebrada Pacairigua, con la finalidad de ver fluir sus aguas nuevamente con la majestuosidad de antaño. Las leyes nos otorgan facultades para evitar que el Río Pacairigua sea un colector de aguas residuales. <br></br>En tal sentido proponemos aprovechar las potencialidades productivas y económicas del Río y la Quebrada Pacairigua, con la activación de una Empresa de Producción Social Comunal – Turismo EVA, EPS: orientada a la actividad económica Turística la cual se encargará de ofertar, promocionar y administrar (bajo estricto cumplimiento sanitario del COVID-19) paquetes turísticos, los cuales estarán custodiados por la milicia bolivariana (UPDI y BPDI Valle Arriba), bomberos forestales de la urbanización Valle Arriba, organismos policiales del cuadrante 10, Ministerio del Poder Popular para el Ecosocialismo (MINEC) e Instituto Nacional de Tierras (INTI). </p>
 
-	                      		<p>ÁMBITO GEOGRÁFICO.<br> La “Comuna Ecosocialista VALLE ARRIBA” se encuentra ubicada en el Estado Miranda, Municipio Zamora, al Noreste de la Ciudad de Guatire, específicamente a 10°29'22" N y 66°31'38" O, con un área equivalente a 580 hectáreas. Se conforma por veinte (20) conjuntos residenciales: Bucare, Capri, Conjunto Londres, Colinas de Valle Arriba, Country Villas, Jardines de Pacairigua, Florencia, Las Bonitas II, Las Flores, Los Chaguaramos, Los Valles, Mónaco, Roma, San Antonio, Sevilla, Valle Alto, Valle Encantado, Valle Ginebra, Valle Grande y Viena. Dos (2) zonas populares: Valle Bonito y Valle Cielo. <br><br/>Limita al NORTE: Cota 900 Parque Nacional Waraira Ripano. SUR: Av. principal Urbanización Valle Arriba, Calle las Planadas, Muro perimetral Country Villa. ESTE: Fila Maestra Cerro Muñoz. OESTE: Avenida Principal de Terrinca / Cota 900 Parque Waraira Repano.</p><hr>
-	                      		
-	                      		<p>DISTRIBUCIÓN POR TIPO DE VIVIENDA.<br> En nuestro Comuna se encuentran los siguientes tipos de vivienda: 3.900 APARTAMENTOS, 1.250 CASAS URBANAS, 450 CASAS RURALES, 345 RANCHOS y 85 BARRACAS. <br><br/>SERVICIOS BÁSICOS EXISTENTES.<br> Aceras, Aguas blancas, Aguas servidas, Alumbrado eléctrico, Canalización aguas de lluvia, Cancha de deporte, Electricidad medidor, Gas doméstico (GLP), Internet, Parada de bus, Recolección de basura, Transporte público, Televisión por cable y Vialidad.<br><br/> 10 PRINCIPALES CARRERAS DE PROFESIONALES GRADUADOS.<br> Administradores, Docentes, Ingenieros, Contadores, Informaticos, Médicos, Abogados, Enfermeros, Farmaceuticos y Economistas.<br><br/>10 OCUPACIONES PROFESIONALES MAS RECURRENTES.<br> Artesanos, Comerciantes, Transportistas, Funcionarios, Operadores técnicos, Bomberos, Cajeros, Operadores control de calidad, Deportistas y Secretarias.</p><hr>
-	                      		
-	                      		<p>10 ENFERMEDADES MAS RECURRENTES.<br> Hipertensión arterial, Asma, Diabetes, Insuficiencia cardiaca, Obesidad, Vulnerabilidad nutricional, Osteoporosis, Cerebro vascular, Tiroides, Insuficiencia arterial, Reumatismo y Cáncer.<br><br/> 10 DISCAPACIDADES MAS RECURRENTES.<br> Visual, Mental intelectual, Musculo -Esqueletica, Respiratoria, Cardiovascular, Autismo o Aspenger, Neurologica, Audistiva, Artritis reumatoide, Multiple, Voz y habla.<br><br/>10 BENEFICIOS SOCIALES EMBLEMATICOS.<br> Clap, Gran Misión Vivienda, Hogares de la patria, Amor mayor ó pensión, 0800 Mi Hogar, Barrio adentro - Barrio Tricolor, José Gregorio Hernández, Chamba juvenil, Lactancia materna y Parto humanizado. </p><hr>
+                                <p>ÁMBITO GEOGRÁFICO.<br> La “Comuna Ecosocialista VALLE ARRIBA” se encuentra ubicada en el Estado Miranda, Municipio Zamora, al Noreste de la Ciudad de Guatire, específicamente a 10°29'22" N y 66°31'38" O, con un área equivalente a 580 hectáreas. Se conforma por veinte (20) conjuntos residenciales: Bucare, Capri, Conjunto Londres, Colinas de Valle Arriba, Country Villas, Jardines de Pacairigua, Florencia, Las Bonitas II, Las Flores, Los Chaguaramos, Los Valles, Mónaco, Roma, San Antonio, Sevilla, Valle Alto, Valle Encantado, Valle Ginebra, Valle Grande y Viena. Dos (2) zonas populares: Valle Bonito y Valle Cielo. <br><br/>Limita al NORTE: Cota 900 Parque Nacional Waraira Ripano. SUR: Av. principal Urbanización Valle Arriba, Calle las Planadas, Muro perimetral Country Villa. ESTE: Fila Maestra Cerro Muñoz. OESTE: Avenida Principal de Terrinca / Cota 900 Parque Waraira Repano.</p><hr>
+                                
+                                <p>DISTRIBUCIÓN POR TIPO DE VIVIENDA.<br> En nuestro Comuna se encuentran los siguientes tipos de vivienda: 3.900 APARTAMENTOS, 1.250 CASAS URBANAS, 450 CASAS RURALES, 345 RANCHOS y 85 BARRACAS. <br><br/>SERVICIOS BÁSICOS EXISTENTES.<br> Aceras, Aguas blancas, Aguas servidas, Alumbrado eléctrico, Canalización aguas de lluvia, Cancha de deporte, Electricidad medidor, Gas doméstico (GLP), Internet, Parada de bus, Recolección de basura, Transporte público, Televisión por cable y Vialidad.<br><br/> 10 PRINCIPALES CARRERAS DE PROFESIONALES GRADUADOS.<br> Administradores, Docentes, Ingenieros, Contadores, Informaticos, Médicos, Abogados, Enfermeros, Farmaceuticos y Economistas.<br><br/>10 OCUPACIONES PROFESIONALES MAS RECURRENTES.<br> Artesanos, Comerciantes, Transportistas, Funcionarios, Operadores técnicos, Bomberos, Cajeros, Operadores control de calidad, Deportistas y Secretarias.</p><hr>
+                                
+                                <p>10 ENFERMEDADES MAS RECURRENTES.<br> Hipertensión arterial, Asma, Diabetes, Insuficiencia cardiaca, Obesidad, Vulnerabilidad nutricional, Osteoporosis, Cerebro vascular, Tiroides, Insuficiencia arterial, Reumatismo y Cáncer.<br><br/> 10 DISCAPACIDADES MAS RECURRENTES.<br> Visual, Mental intelectual, Musculo -Esqueletica, Respiratoria, Cardiovascular, Autismo o Aspenger, Neurologica, Audistiva, Artritis reumatoide, Multiple, Voz y habla.<br><br/>10 BENEFICIOS SOCIALES EMBLEMATICOS.<br> Clap, Gran Misión Vivienda, Hogares de la patria, Amor mayor ó pensión, 0800 Mi Hogar, Barrio adentro - Barrio Tricolor, José Gregorio Hernández, Chamba juvenil, Lactancia materna y Parto humanizado. </p><hr>
 
                             </div>
-		                    <table>
-								<caption>Gobierno Comunitario</caption>
-								<tr><th>Descripción</th><th>Detalle</th></tr> <!-- -Columnas en negrilla------>
-								<tr><td>SITUR</td><td>C-MIX-2021-05-0009</td></tr>
-								<tr><td>Municipio</td><td>Zamora</td></tr>
-								<tr><td>Parroquia</td><td>Guatire</td></tr>
-								<tr><td>Urbanización</td><td>Valle Arriba</td></tr>
-								<tr><td>Cuadrante de Paz</td><td>10</td></tr>
-								<tr><td>Familias</td><td>5.000</td></tr>
-								<tr><td>Habitantes</td><td>10.500</td></tr>
-							</table>
-							<!--  ------>
-							<table>
-								<caption>Caracterización Social</caption>
-								<tr><th>Descripción</th><th>Cantidad</th></tr><!-- -Filas ------>
-								<tr><td>Consejos Comunales</td><td>12</td></tr>
-								<tr><td>UBCH</td><td>03</td></tr>			
-								<tr><td>Centros de Salud</td><td>04</td></tr>
-								<tr><td>Barrio Adentro - Tipo 1</td><td>03</td></tr>
-								<tr><td>Ambulatorio</td><td>00</td></tr>
-								<tr><td>Sala Rehabilitación Integral (SRI)</td><td>01</td></tr>
-								<tr><td>Centro Diagnostico Integral (CDI)</td><td>01</td></tr>
-								<tr><td>Hospitales</td><td>00</td></tr>
-								<tr><td>Centros Electorales</td><td>02</td></tr>
-								<tr><td>Centros Educativos</td><td>02</td></tr>
-								<tr><td>Pre escolar</td><td>00</td></tr>
-								<tr><td>Escuelas</td><td>02</td></tr>
-								<tr><td>Liceos</td><td>00</td></tr>
-								<tr><td>Universidades</td><td>00</td></tr>
-							</table>
-							<!--  ------>
-							<table>
-								<caption>Voceros Gobierno Comunitario</caption>
-								<tr><th>Denominación</th><th>Nombre y Apellido</th><th>Telefóno</th></tr>
-								<tr><td>Cuadrante de Paz</td><td>Lesbia Henriquez</td><td>(0412) 736.7791</td></tr>
-								<tr><td>Poder Popular</td><td>Ninoska Palencia</td><td>(0412) 718.4352</td></tr>
-								<tr><td>Salud (ASIC)</td><td>Diana Palacios</td><td>(0412) 703.9279</td></tr>
-								<tr><td>Educación</td><td>Polina Aponte</td><td>(0424) 256.2807</td></tr>
-								<tr><td>Juventud</td><td>Genesis Rodriguez</td><td>(0426) 060.4438</td></tr>
-								<tr><td>Economía</td><td>Wilmer Abreu</td><td>(0424) 239.2208</td></tr>
-								<tr><td>Milicia</td><td>Juan Quintana</td><td>(0212) 342.9392</td></tr>
-								<tr><td>Parto Humanizado</td><td></td><td></td></tr>			
-							</table>
-                    	</div>                    
-                	</div>
+                            <table>
+                                <caption>Gobierno Comunitario</caption>
+                                <tr><th>Descripción</th><th>Detalle</th></tr> <!-- -Columnas en negrilla------>
+                                <tr><td>SITUR</td><td>C-MIX-2021-05-0009</td></tr>
+                                <tr><td>Municipio</td><td>Zamora</td></tr>
+                                <tr><td>Parroquia</td><td>Guatire</td></tr>
+                                <tr><td>Urbanización</td><td>Valle Arriba</td></tr>
+                                <tr><td>Cuadrante de Paz</td><td>10</td></tr>
+                                <tr><td>Familias</td><td>5.000</td></tr>
+                                <tr><td>Habitantes</td><td>10.500</td></tr>
+                            </table>
+                            <!--  ------>
+                            <table>
+                                <caption>Caracterización Social</caption>
+                                <tr><th>Descripción</th><th>Cantidad</th></tr><!-- -Filas ------>
+                                <tr><td>Consejos Comunales</td><td>12</td></tr>
+                                <tr><td>UBCH</td><td>03</td></tr>           
+                                <tr><td>Centros de Salud</td><td>04</td></tr>
+                                <tr><td>Barrio Adentro - Tipo 1</td><td>03</td></tr>
+                                <tr><td>Ambulatorio</td><td>00</td></tr>
+                                <tr><td>Sala Rehabilitación Integral (SRI)</td><td>01</td></tr>
+                                <tr><td>Centro Diagnostico Integral (CDI)</td><td>01</td></tr>
+                                <tr><td>Hospitales</td><td>00</td></tr>
+                                <tr><td>Centros Electorales</td><td>02</td></tr>
+                                <tr><td>Centros Educativos</td><td>02</td></tr>
+                                <tr><td>Pre escolar</td><td>00</td></tr>
+                                <tr><td>Escuelas</td><td>02</td></tr>
+                                <tr><td>Liceos</td><td>00</td></tr>
+                                <tr><td>Universidades</td><td>00</td></tr>
+                            </table>
+                            <!--  ------>
+                            <table>
+                                <caption>Voceros Gobierno Comunitario</caption>
+                                <tr><th>Denominación</th><th>Nombre y Apellido</th><th>Telefóno</th></tr>
+                                <tr><td>Cuadrante de Paz</td><td>Lesbia Henriquez</td><td>(0412) 736.7791</td></tr>
+                                <tr><td>Poder Popular</td><td>Ninoska Palencia</td><td>(0412) 718.4352</td></tr>
+                                <tr><td>Salud (ASIC)</td><td>Diana Palacios</td><td>(0412) 703.9279</td></tr>
+                                <tr><td>Educación</td><td>Polina Aponte</td><td>(0424) 256.2807</td></tr>
+                                <tr><td>Juventud</td><td>Genesis Rodriguez</td><td>(0426) 060.4438</td></tr>
+                                <tr><td>Economía</td><td>Wilmer Abreu</td><td>(0424) 239.2208</td></tr>
+                                <tr><td>Milicia</td><td>Juan Quintana</td><td>(0212) 342.9392</td></tr>
+                                <tr><td>Parto Humanizado</td><td></td><td></td></tr>            
+                            </table>
+                        </div>                    
+                    </div>
 
-				<!---CONTENIDO INDIRECTO AL MAIN --->
-		            <aside class="sidebar">
-		                <div class="popular-post">
-		                	<hr>
-		                    <h2>ESTADÍSTICAS.</h2>
-		                    <div class="post-content" data-aos="flip-up" data-aos-delay="200">
-		                    	<div class="post-info flex-row"> <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;14 de julio 2020</span>
-		                    </div>
-			                <div><img loading="lazy" src="assets/GRAFICOS/PIRAMIDE.webp" class="img" alt="blog1"></div>
-		                    </div><hr>
-		                    <div><img loading="lazy" src="assets/GRAFICOS/SEXO.webp" class="img" alt="blog1"></div>
-		                    </div><hr>
-		                    <div><img loading="lazy" src="assets/GRAFICOS/educacion.webp" class="img" alt="blog1"></div>
-		                        
-		                </div>
-	                    <div class="post-title"> <a href="index.html"></a></div>
-	        			<nav><a href="index.html"><img loading="lazy" src="assets/home.webp" alt="" ></a></nav>
-	        			</aside>
-				</div>
+                    <!---CONTENIDO INDIRECTO AL MAIN --->
+                    <aside class="sidebar">
+                        <div class="popular-post">
+                            <hr>
+                            <h2>ESTADÍSTICAS.</h2>
+                            <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                                <div class="post-info flex-row"> <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;14 de julio 2020</span>
+                            </div>
+                            <div><img loading="lazy" src="assets/GRAFICOS/PIRAMIDE.webp" class="img" alt="blog1"></div>
+                            </div><hr>
+                            <div><img loading="lazy" src="assets/GRAFICOS/SEXO.webp" class="img" alt="blog1"></div>
+                            </div><hr>
+                            <div><img loading="lazy" src="assets/GRAFICOS/educacion.webp" class="img" alt="blog1"></div>
+                                
+                        </div>
+                        <div class="post-title"> <a href="index.html"></a></div>
+                        <nav><a href="index.html"><img loading="lazy" src="assets/home.webp" alt="" ></a></nav>
+                    </aside>
+                    </div>
+                </section>          
 
-			        
-					<!---CONTENIDO INDIRECTO AL MAIN --->
-			</section>			
+                </main>
+        <!---FIN CONTENIDO PRINCIPAL --->
 
-
-			</main>
-		<!---FIN CONTENIDO PRINCIPAL --->
-
-		<!---PIE DE PAGINA --->
-			<footer class="footer">
-	            <div class="container">
-	                <div class="about-us" data-aos="fade-right" data-aos-delay="200">
-	                    <h2>Nosotros</h2>
-	                    <p>Pretendemos crear una reputación producto de nuestro trabajo y la medimos de acuerdo al cumplimiento de nuestros objetivos.</p>
-	                </div>
-	                <div class="follow" data-aos="fade-left" data-aos-delay="200">
-	                    <h2>Siguenos</h2>
-	                    <p>Nuestras redes sociales</p>
-	                    <div>
-	                        <a href="https://twitter.com/2021cva"><i class="fab fa-twitter"></i></a>
-	                        <a href="https://www.instagram.com/2021cva"><i class="fab fa-instagram"></i></a>
-	                        <a href="www.facebook.com//2021cva"><i class="fab fa-facebook-f"></i></a>
-	                        <i class="fab fa-youtube"></i>
-	                        
-	                    </div>
-	                </div>
-	            </div>
-	            <div class="rights flex-row">
-	                <h4 class="text-white">
-	                    Copyright ©2021 Todos los derechos reservados | Hecho por Long Art Digital
-	               
-	                </h4>
-	            </div>
-	        </footer>					
-			<!---FIN PIE DE PAGINA --->
+        <!---PIE DE PAGINA --->
+            <footer class="footer">
+                <div class="container">
+                    <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                        <h2>Nosotros</h2>
+                        <p>Pretendemos crear una reputación producto de nuestro trabajo y la medimos de acuerdo al cumplimiento de nuestros objetivos.</p>
+                    </div>
+                    <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                        <h2>Siguenos</h2>
+                        <p>Nuestras redes sociales</p>
+                        <div>
+                            <a href="https://twitter.com/2021cva"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/2021cva"><i class="fab fa-instagram"></i></a>
+                            <a href="www.facebook.com//2021cva"><i class="fab fa-facebook-f"></i></a>
+                            <i class="fab fa-youtube"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="rights flex-row">
+                    <h4 class="text-white">
+                        Copyright ©2021 Todos los derechos reservados | Hecho por Long Art Digital
+                   
+                    </h4>
+                </div>
+            </footer>                   
+            <!---FIN PIE DE PAGINA --->
 
 
 
-			<!---libreria del carousel --->
-			<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-			<!---libreria del carousel --->
-			<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-			<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-			<script src="js/app.js"></script>	
+            <!---libreria del carousel --->
+            <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+            <!---libreria del carousel --->
+            <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+            <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+            <script src="js/app.js"></script>   
 
 
-		</body>
+        </body>
 </html>
