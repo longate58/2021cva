@@ -109,13 +109,13 @@ info.addTo(map);
 
 // Generar rangos de colores de acuerdo con el atributo o campo TOT_VIVIEN
 function getColor(d){
-    return  d > 900 ? '#0D5795' :
-            d > 750 ? '#137fd9' :
-            d > 600 ? '#009846' :
-            d > 450 ? '#A8E2B9' :
-            d > 250 ? '#E5E006' :
-            d > 100 ? '#FFB553' :
-            d > 0    ? '#FEFA46' :
+    return  d > 9000 ? '#137fd9' :
+            d > 7500 ? '#2196f3' :
+            d > 6000 ? '#009846' :
+            d > 4500 ? '#48c26c' :
+            d > 2500 ? '#e28000' :
+            d > 1000 ? '#ff9800' :
+            d > 0    ? '#ffc340' :
                        '#0000FF';
 }
 

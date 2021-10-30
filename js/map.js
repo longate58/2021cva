@@ -4,6 +4,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors HCL Digital.eps'
 }).addTo(map);
 
+// Agregar mapa base para el Mini Mapa
+var carto_light = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {attribution: '©OpenStreetMap, ©CartoDB',subdomains: 'abcd',maxZoom: 24});
+
+// Agregar plugin MiniMap
+var minimap = new L.Control.MiniMap(carto_light,
+    {
+        toggleDisplay: true,
+        minimized: false,
+        position: "bottomleft"
+    }).addTo(map);
+
 
 //-------------AGREGAR UN MARCADOR-----------------------------------------
 L.marker([10.4968300, -66.5304963]).addTo(map)
@@ -12,84 +23,84 @@ L.marker([10.4968300, -66.5304963]).addTo(map)
 
 //-------------AGREGAR UN CIRCULO-----------------------------------------
 var circle = L.circle ([10.491669700, -66.528557900], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.4904422, -66.5354097], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.4769475, -66.5248051], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.4823876, -66.5318649], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.476791600, -66.531925700], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.474076000, -66.530925900], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.474915700, -66.528333600], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.487345500, -66.525346200], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.476423900, -66.527149400], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.483971800, -66.537229600], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.478591200, -66.529139600], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
 }).addTo(map);
 
 var circle = L.circle ([10.484830000, -66.530496300], {
-  color: 'red',
+  color: 'blue',
   fillcolor: '#f03',
   fillOpacity: 0.5,
   radius: 40
