@@ -184,8 +184,14 @@ L.marker([10.4968300, -66.5304963]).addTo(map)
     .openPopup();
 
 
-
-
+ //l--------------ogo position: bottomright, topright, topleft, bottomleft
+    var logo = L.control({position: 'topleft'});
+    logo.onAdd = function(map){
+        var div = L.DomUtil.create('div', 'myclass');
+        div.innerHTML= "<img src='assets/logo.png'/ width='90' height='40'  >";
+        return div;
+    }
+    logo.addTo(map);
 
 
 // Agregar atribucion
