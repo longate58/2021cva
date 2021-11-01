@@ -26,7 +26,12 @@
     --Livvic : 'Livvic', cursive;
 }
 
-
+#logoContainer {
+    position: absolute;
+    z-index: 100;
+    top: 395px;
+    left: 325px;
+}
 
 html, body{
     margin: 0%;
