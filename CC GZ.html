@@ -1,0 +1,145 @@
+<<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Demografia</title>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+		<link rel="shortcut icon" href="img/ccgz.webp" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+		<link rel="stylesheet" href="css/Proyectos.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+            crossorigin="" />
+
+
+
+	</head>
+
+	<body>
+		<!---ENCABEZADO DE LA PAGINA --->
+			<div class="contenedor">
+				<header class="contenido-principal">
+					<img loading="lazy" src="assets/Proyectos/14.webp" alt="" class="contenido-principal__imagen">
+					<div class="contenido-principal__contenedor">
+						<h1 class="contenido-principal__titulo">CARTOGRAFÍA TEMATÍCA</h1>
+						<p class="contenido-principal__resumen">
+							 El Consejo Comunal GIRAZOLES DE ZAMORA propone la creación de indicadores demográficos, los cuales permitan resumir la evolución histórica del comportamiento demográficos básicos en nuestro sector (natalidad, fecundidad, mortalidad y nupcialidad), de los divorcios, de los movimientos migratorios y del crecimiento y estructura de la población residente en la Comuna VALLE ARRIBA. Se calculan a partir de los resultados de las estadísticas de Nacimientos, Defunciones y Matrimonios, de la Estadística de nulidades, separaciones y divorcios, de la Estadística de migraciones y de las Cifras de población residente en el Municipio Zamora, del Estado Miranda.
+						</p>
+					</div>
+				</header>
+
+		<!--- FIN ENCABEZADO DE LA PAGINA --->
+
+		<!---CONTENIDO PRINCIPAL --->
+		<main>
+
+            <section class="container">
+				<div class="site-content">
+                    <div class="posts">
+                         <hr>
+                        <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+
+                            <div class="post-title">
+                                <a href="#">POTENCIALIDAD: Densidad Demográfica. </a>
+                                <p>La densidad demográfica es baja en comparación a la extensión territorial de 67 héctareas ya que la mayor concentración de la población se encuentra ubicada en el Parque residencial Jardines de Pacairigua.<br></br> </p>
+                            </div>
+                    	<div id="myMap" style="height: 600px"></div>
+                      
+
+                      <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+                       integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+                       crossorigin=""></script>
+                      <script src="js_cc/map.js"></script>
+
+                      <div class="post-title">
+
+                      		<p>08 ORGANIZACIONES POPULARES.<br> Parlamento Comuna Ecosocialista Valle Arriba, RAAS Jardines de Pacairigua, Brigadistas Somos Venezuela Jardines de Pacairigua, UPDI Jardines de Pacairigua, CLAP Ezequiel Zamora, Asociación Civil Girasol, Junta de Condominio Gardenia y Colectivo Gran Mariscal de Ayacucho.<br><br/>ESTRUCTURA RAAS JARDINES DE PACAIRIGUA.<br> 5 JEFES DE PATRULLA SECTORIALES RAAS VALLE ARRIBA: Comunas y movimientos sociales, Clase Obrera, Economía Productiva, Técnica electoral, Propaganda y comunicación.<br> 1 Jefe de Comunidad, 21 Jefes Territoriales Jardines de Pacairigua.<br> 1 Jefe Somos Venezuela Jardines de Pacairigua. <br>1 Jefe de UPDI Jardines de Pacairigua.<br><br/>DISTRIBUCIÓN POR TIPO DE VIVIENDA.<br> En nuestro Consejo Comunal se encuentran los siguientes tipos de vivienda: 565 APARTAMENTOS, 16 RANCHOS y 4 BARRACAS. <br><br/>SERVICIOS BÁSICOS EXISTENTES.<br> Aceras, Aguas blancas, Aguas servidas, Alumbrado eléctrico, Canalización aguas de lluvia, Cancha de deporte, Electricidad medidor, Gas doméstico, Internet, Parada de bus, Recolección de basura, Transporte público, Televisión por cable y Vialidad.<br><br/> 10 PRINCIPALES CARRERAS DE PROFESIONALES GRADUADOS.<br> Administradores, Docentes, Ingenieros, Contadores, Informaticos, Médicos, Abogados, Enfermeros, Farmaceuticos y Economistas.<br><br/>10 OCUPACIONES PROFESIONALES MAS RECURRENTES.<br> Artesanos, Comerciantes, Transportistas, Funcionarios, Operadores técnicos, Bomberos, Cajeros, Operadores control de calidad, Deportistas y Secretarias. <br><br/>10 ENFERMEDADES MAS RECURRENTES.<br> Hipertensión arterial, Asma, Diabetes, Insuficiencia cardiaca, Obesidad, Vulnerabilidad nutricional, Osteoporosis, Cerebro vascular, Tiroides, Insuficiencia arterial, Reumatismo y Cáncer.<br><br/> 10 DISCAPACIDADES MAS RECURRENTES.<br> Visual, Mental intelectual, Musculo -Esqueletica, Respiratoria, Cardiovascular, Autismo o Aspenger, Neurologica, Audistiva, Artritis reumatoide, Multiple, Voz y habla.<br><br/>10 BENEFICIOS SOCIALES EMBLEMATICOS.<br> Clap, Gran Misión Vivienda, Hogares de la patria, Amor mayor ó pensión, 0800 Mi Hogar, Barrio adentro - Barrio Tricolor, José Gregorio Hernández, Chamba juvenil, Lactancia materna y Parto humanizado. </p>
+                      </div>
+                    </div>                    
+                </div>
+
+				<!---CONTENIDO INDIRECTO AL MAIN --->
+	            <aside class="sidebar">
+	                <div class="popular-post">
+	                    <h2>ESTADÍSTICAS.</h2>
+	                    <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+	                    	<div class="post-info flex-row"> <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;14 de julio 2020</span>       </div>
+		                    
+		                    <div><img loading="lazy" src="img/GRAFICOS/PIRAMIDE.webp" class="img" alt="blog1"></div>
+	                        </div>
+	                        <div><img loading="lazy" src="img/GRAFICOS/SEXO.webp" class="img" alt="blog1"></div>
+	                        </div>
+	                        <div><img loading="lazy" src="img/GRAFICOS/educacion.webp" class="img" alt="blog1"></div>
+	                        </div>
+
+
+
+	                        <div class="post-title"> <a href="index.html"></a> 
+	                        	
+	                        </div>
+        					<nav>
+            					
+            					<a  href="index.html"><img loading="lazy" src="assets/home.webp" alt="" ></a>
+	           
+    					    </nav>
+	           
+    					    </nav>
+
+		                </div>
+		            </aside>
+					<!---CONTENIDO INDIRECTO AL MAIN --->
+			</section>
+		</main>
+		<!---FIN CONTENIDO PRINCIPAL --->
+
+		<!---PIE DE PAGINA --->
+		<footer class="footer">
+            <div class="container">
+                <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                    <h2>Nosotros</h2>
+                    <p>Pretendemos crear una Reputación producto de nuestro trabajo y la medimos de acuerdo al cumplimiento de nuestros objetivos.</p>
+                </div>
+                <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+                    <h2>Boletin informativo</h2>
+                    <p>La razón de este Boletin Digital es básicamente una herramienta de evaluación. Con la finalidad de dar transparencia a la gestión del Consejo Comunal con algo innovador..</p>
+                </div>
+                <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                    <h2>Siguenos</h2>
+                    <p>Nuestras redes sociales</p>
+                    <div>
+                    <a href="https://www.facebook.com/2021cva"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/@2021cva"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/2021cva"><i class="fab fa-instagram"></i></a>
+                    <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="rights flex-row">
+                <h4 class="text-gray">
+                    Copyright ©2020 Todos los derechos reservados | Hecho por HCL Digital
+               
+                </h4>
+            </div>
+            <div class="move-up">
+                <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+            </div>
+        </footer>					
+		<!---FIN PIE DE PAGINA --->
+
+
+
+		<!---libreria del carousel --->
+		<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+		<!---libreria del carousel --->
+		<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+		<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+		<script src="js/app.js"></script>	
+	</body>
+</html>
